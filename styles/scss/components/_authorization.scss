@@ -1,0 +1,122 @@
+.authorization{
+  background: rgba(0, 0, 0, 0.32);
+  position: fixed;
+  z-index: 15;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  &__modal{
+    border-radius: 16px;
+    max-width: 422px;
+    width: 100%;
+    background: white;
+    padding: 32px;
+    max-height: 90vh;
+    overflow: auto;
+    position: relative;
+    margin-left: 16px;
+    margin-right: 16px;
+    .close{
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      cursor: pointer;
+    }
+    .title{
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 24px;
+    }
+    .description{
+      margin-top: -8px;
+      margin-bottom: 16px;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+    .radio{
+      display: flex;
+      flex-wrap: wrap;
+      span{
+        display: block;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 12px;
+        padding-right: 12px;
+        font-size: 16px;
+        color: $black-color;
+        font-weight: 400;
+        cursor: pointer;
+        border-radius: 8px;
+        border: 1px solid #D9D9D9;
+        & + span{
+          margin-left: 16px;
+        }
+        &.active{
+          border: 1px solid #7D4DE1;
+          background: #F8F5FF;
+        }
+      }
+    }
+    .text-field{
+      margin-bottom: 16px;
+      label{
+        color: $grey;
+        font-size: 16px;
+        font-weight: 400;
+        display: block;
+        margin-bottom: 10px;
+      }
+      input{
+        height: 48px;
+        width: 100%;
+        border-radius: 8px;
+        border: 1px solid #D9D9D9;
+        background: white;
+        padding: 0 16px;
+        font-size: 16px;
+        font-weight: 400;
+        color: $black-color;
+        cursor: pointer;
+        &::placeholder{
+          color: $grey;
+        }
+      }
+    }
+    .forgot{
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 24px;
+      color: $grey;
+      font-size: 16px;
+      font-weight: 400;
+      cursor: pointer;
+    }
+    .button{
+      height: 48px;
+      width: 100%;
+    }
+    .variant{
+      display: flex;
+      justify-content: center;
+      margin-top: 16px;
+      color: $grey;
+      font-size: 16px;
+      font-weight: 400;
+      span{
+        color: $main-color;
+        margin-left: 6px;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,253 @@
+.articles{
+  &__inner{
+    padding: 56px 0 110px 0;
+  }
+  &__cards{
+    margin-top: 72px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__card{
+    width: calc(33.3333% - 21.3333px);
+    margin-right: 32px;
+    border-radius: 12px;
+    border: 1px solid#D9D9D9;
+    background: #FEFEFE;
+    padding: 16px;
+    margin-bottom: 32px;
+    cursor: pointer;
+    &:nth-child(3n+3){
+      margin-right: 0;
+    }
+    &-img{
+      height: 200px;
+      width: 100%;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+    }
+    h3{
+      margin: 20px 0 0 0;
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 24px;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;  
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      color: $black-color;
+    }
+    p{
+      margin: 12px 0 0 0;
+      color: $grey;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;  
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    a{
+      display: flex;
+      align-items: center;
+      margin: 20px 0 0 0;
+      color: $main-color;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      gap: 8px;
+      transition: 0.2s;
+      svg{
+        transition: 0.2s;
+      }
+      &:hover{
+        svg{
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+  &__similar{
+    .title{
+      text-align: left;
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 24px;
+    }
+    .articles__card{
+      width: 100%;
+    }
+  }
+}
+
+.article{
+  &__inner{
+    padding: 24px 0 110px 0;
+    &>.title{
+      text-align: left;
+      font-size: 40px;
+      margin-top: 24px;
+    }
+    .date{
+      margin-top: 16px;
+      color: $grey;
+      font-size: 16px;
+      font-weight: 400;
+      display: block;
+    }
+  }
+  &__wrap{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    .articles__similar{
+      width: 405px;
+    }
+  }
+  &__item{
+    width: calc(100% - (405px + 95px));
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    &>img{
+      height: 400px;
+      width: 100%;
+      object-fit: cover;
+      object-position: center center;
+      border-radius: 8px
+    }
+    &>p{
+      margin: 0;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+      color: $black-color;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      b{
+        display: block;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1300px){
+  .article{
+    &__item{
+      width: calc(100% - 437px);
+    }
+  }
+}
+
+@media (max-width: 992px){
+  .articles{
+    &__inner{
+      padding-top: 56px;
+      padding-bottom: 80px;
+      .title{
+        font-size: 32px;
+        line-height: 44px;
+      }
+      .breadcrumbs{
+        margin-top: 16px;
+      }
+    }
+    &__cards{
+      margin-top: 48px;
+      justify-content: space-between;
+    }
+    &__card{
+      width: calc(50% - 12px);
+      margin-right: 0;
+      margin-bottom: 24px;
+    }
+  }
+
+  .article{
+    &__wrap{
+      flex-wrap: wrap;
+      width: 100%;
+      .articles__similar{
+        margin-top: 64px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        .title{
+          width: 100%;
+        }
+        .articles__card{
+          width: calc(50% - 12px);
+          display: none;
+          &:first-child{
+            display: block;
+          }
+          &:nth-child(2n){
+            display: block;
+          }
+        }
+      }
+    }
+    &__item{
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 680px){
+  .articles{
+    &__inner{
+      .title{
+        font-size: 30px;
+        line-height: normal;
+      }
+      .breadcrumbs{
+        margin-top: 24px;
+      }
+    }
+    &__cards{
+      margin-top: 56px;
+    }
+    &__card{
+      width: 100%;
+      margin-bottom: 16px;
+    }
+  }
+
+  .article{
+    &__inner{
+      padding-top: 16px;
+      padding-bottom: 80px;
+      &>.title{
+        font-size: 24px;
+        line-height: normal;
+      }
+    }
+    &__item{
+      &>img{
+        height: 210px;
+      }
+    }
+    &__wrap{
+      .articles__similar{
+        .title{
+          font-size: 28px;
+          line-height: 32px;
+        }
+        .articles__card{
+          width: 100%;
+          display: block !important;
+        }
+      }
+    }
+  }
+}

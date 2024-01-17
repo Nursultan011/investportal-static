@@ -1,0 +1,143 @@
+.footer{
+  &__inner{
+    padding: 56px 0 32px 0;
+    .safety{
+      margin-top: 22px;
+      padding-top: 22px;
+      border-top: 1px solid #C0C0C0;
+      color: #5B5B5B;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+  &__wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  &__company{
+    max-width: 405px;
+    svg{
+      max-width: 154px;
+    }
+    p{
+      margin: 16px 0 0 0;
+      font-size: 16px;
+      color: $black-color;
+      font-weight: 300;
+    }
+  }
+  &__details{
+    display: flex;
+    &>div{
+      & + div{
+        margin-left: 92px;
+      }
+    }
+    h3{
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: $black-color;
+    }
+    ul{
+      padding: 0;
+      margin: 16px 0 0 0;
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      li{
+        font-size: 16px;
+        font-weight: 300;
+        color: $black-color;
+        & + li{
+          margin-left: 24px;
+        }
+        a{
+          display: block;
+          svg{
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 681px) and (max-width: 992px){
+  .footer{
+    &__company{
+      max-width: 280px;
+    }
+    &__details{
+      flex: 1;
+      justify-content: space-between;
+      ul{
+        flex-direction: column;
+        align-items: flex-start;
+        li{
+          & + li{
+            margin-left: 0;
+            margin-top: 16px;
+          }
+        }
+      }
+      &>div{
+        & + div{
+          margin-left: 0;
+          ul{
+            flex-direction: row;
+            li{
+              & + li{
+                margin-left: 16px;
+                margin-top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 680px){
+  .footer{
+    &__wrap{
+      flex-wrap: wrap;
+      gap: 0;
+    }
+    &__company{
+      max-width: 100%;
+      width: 100%;
+      p{
+        max-width: 286px;
+      }
+    }
+    &__details{
+      margin-top: 24px;
+      max-width: 100%;
+      width: 100%;
+      flex-wrap: wrap;
+      &>div{
+        width: 100%;
+        & + div{
+          margin-top: 16px;
+          margin-left: 0;
+        }
+      }
+      ul{
+        flex-wrap: wrap;
+        li{
+          width: 100%;
+          & + li{
+            margin-left: 0;
+            margin-top: 12px;
+          }
+        }
+      }
+    }
+  }
+}
