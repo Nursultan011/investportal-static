@@ -645,14 +645,14 @@
   font-weight: 400;
   cursor: pointer;
   border-radius: 8px;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
 }
 .authorization__modal .radio span + span {
   margin-left: 16px;
 }
 .authorization__modal .radio span.active {
-  border: 1px solid #7D4DE1;
-  background: #F8F5FF;
+  border: 1px solid #7d4de1;
+  background: #f8f5ff;
 }
 .authorization__modal .text-field {
   margin-bottom: 16px;
@@ -668,7 +668,7 @@
   height: 48px;
   width: 100%;
   border-radius: 8px;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
   background: white;
   padding: 0 16px;
   font-size: 16px;
@@ -678,6 +678,15 @@
 }
 .authorization__modal .text-field input::placeholder {
   color: #5B5B5B;
+}
+.authorization__modal #deleteModalForm {
+  display: flex;
+  gap: 16px;
+}
+.authorization__modal #deleteModalForm .deleteModal-btn-1 {
+  color: #7d4de1;
+  background-color: #fff;
+  border: 1px solid #7d4de1;
 }
 .authorization__modal .forgot {
   display: flex;
@@ -1608,6 +1617,7 @@
 .apartments table .details-dropdown .box {
   display: flex;
   margin-bottom: 16px;
+  cursor: pointer;
 }
 .apartments table .details-dropdown .box:last-child {
   margin-bottom: 0;
@@ -1617,6 +1627,8 @@
   font-weight: 500;
   color: #262626;
   margin-left: 16px;
+  cursor: pointer;
+  display: block;
 }
 
 @media (max-width: 1200px) {
@@ -1804,8 +1816,8 @@
 }
 .apartment__details {
   border-radius: 12px;
-  border: 1px solid #D9D9D9;
-  background: #FEFEFE;
+  border: 1px solid #d9d9d9;
+  background: #fefefe;
   padding: 24px;
 }
 .apartment__details .upload {
@@ -1817,10 +1829,10 @@
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  border: 1px dashed var(--main-color, #7D4DE1);
+  border: 1px dashed var(--main-color, #7d4de1);
   height: 240px;
   cursor: pointer;
-  color: #7D4DE1;
+  color: #7d4de1;
   font-size: 16px;
 }
 .apartment__details .upload .upload-label svg {
@@ -1928,6 +1940,9 @@
   margin-bottom: 24px;
   font-size: 16px;
 }
+.apartment__details .form.apartment__form {
+  flex-direction: column;
+}
 .apartment__details .form .text-field {
   margin-bottom: 16px;
 }
@@ -1942,7 +1957,7 @@
   height: 48px;
   width: 100%;
   border-radius: 8px;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
   background: white;
   padding: 0 16px;
   font-size: 16px;
@@ -1970,14 +1985,14 @@
   font-weight: 400;
   cursor: pointer;
   border-radius: 8px;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
 }
 .apartment__details .form .radio span + span {
   margin-left: 8px;
 }
 .apartment__details .form .radio span.active {
-  border: 1px solid #7D4DE1;
-  background: #F8F5FF;
+  border: 1px solid #7d4de1;
+  background: #f8f5ff;
 }
 .apartment__details .form .checkbox {
   display: flex;

@@ -158,6 +158,7 @@
 				.box {
 					display: flex;
 					margin-bottom: 16px;
+					cursor: pointer;
 					&:last-child {
 						margin-bottom: 0;
 					}
@@ -166,6 +167,8 @@
 						font-weight: 500;
 						color: #262626;
 						margin-left: 16px;
+						cursor: pointer;
+						display: block;
 					}
 				}
 			}

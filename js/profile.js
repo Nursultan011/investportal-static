@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
         stroke-linejoin="round"
       />
     </svg>
-    <span>Удалить</span>
+    <span class="box-delete-btn">Удалить</span>
   </div>
 </div>
   `;
@@ -78,5 +78,16 @@ document.addEventListener("DOMContentLoaded", function () {
       });
       el.nextElementSibling.classList.toggle("show");
     });
+  });
+
+  const deleteModal = document.querySelector("#deleteModal");
+  const deleteBtn = document.querySelectorAll(".box-delete-btn");
+  deleteBtn.forEach((el) => {
+    el.addEventListener("click", () => {
+      deleteModal.style.display = "flex";
+    });
+  });
+  deleteModal.addEventListener("click", function () {
+    this.style.display = "none";
   });
 });
