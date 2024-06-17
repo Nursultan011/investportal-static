@@ -370,3 +370,22 @@ body {
     }
   }
 }
+
+.chatBot{
+  padding: 0;
+  overflow: hidden;
+  &__header{
+    background: #F5F5F5;
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    gap: 16px;
+    p{
+      margin: 0;
+      font-size: 16px;
+      color: #262626;
+      line-height: normal;
+      font-weight: 500;
+    }
+  }
+}

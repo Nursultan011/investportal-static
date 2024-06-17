@@ -176,6 +176,7 @@
   background: var(--white, #fefefe);
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
   padding: 16px;
+  display: none;
 }
 .header .language-list li {
   font-size: 15px;
@@ -2469,6 +2470,25 @@ body {
 .upload #previewContainer .image-container span svg {
   width: 24px;
   height: 24px;
+}
+
+.chatBot {
+  padding: 0;
+  overflow: hidden;
+}
+.chatBot__header {
+  background: #F5F5F5;
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  gap: 16px;
+}
+.chatBot__header p {
+  margin: 0;
+  font-size: 16px;
+  color: #262626;
+  line-height: normal;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=index.css.map */

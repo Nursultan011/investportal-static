@@ -10,6 +10,11 @@
 			href="https://unpkg.com/swiper/swiper-bundle.min.css"
 		/>
 		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+		/>
 	</head>
 	<body>
 		<header class="header">
@@ -535,6 +540,15 @@
 									разнообразной инфраструктурой.
 								</p>
 							</div>
+							<div class="chatBot apartment__details">
+								<div class="chatBot__header">
+									<img src="./images/message.svg" alt="">
+									<p>Задайте свой вопрос в ChatBot</p>
+								</div>
+								<div class="chatBot__body">
+									bot
+								</div>
+							</div>
 							<div class="apartment__sticky apartment__details">
 								<h4>Оставьте заявку</h4>
 								<p class="description">
@@ -584,6 +598,14 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</section>
+		<section class="clients similar">
+			<div class="container">
+				<div class="clients__inner similar__sliders">
+					<p class="title">Похожие объекты</p>
+					<div class="cards" id="cardsContainer"></div>
 				</div>
 			</div>
 		</section>
@@ -696,7 +718,21 @@
 				</div>
 			</div>
 		</footer>
+		<script
+			type="text/javascript"
+			src="//code.jquery.com/jquery-1.11.0.min.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+		></script>
+		<script defer src="js/scripts.js"></script>
 		<script defer src="js/profile.js"></script>
 		<script defer src="js/apartment.js"></script>
+		<script defer src="js/cards.js"></script>
 	</body>
 </html>
